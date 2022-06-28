@@ -10,7 +10,7 @@ namespace xadrez_console
 
             Posicao p = new Posicao(3, 4);
 
-            Console.WriteLine(p);
+            Console.WriteLine("Posiçao: " + p);
 
         }
     }
