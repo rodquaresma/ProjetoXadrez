@@ -17,5 +17,11 @@
         {
             return Pecas[linha, coluna];
         }
+
+        public void colocarPeca(Peca p, Posicao pos)
+        {
+            Pecas[pos.Linha, pos.Coluna] = p;
+            p.Posicao = pos;
+        }
     }
 }
