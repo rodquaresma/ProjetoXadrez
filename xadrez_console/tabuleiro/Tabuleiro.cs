@@ -20,7 +20,7 @@
 
         public Peca Peca(Posicao pos)
         {
-            return Pecas[pos.Linha, pos.Coluna];
+            return Pecas[pos.linha, pos.coluna];
         }
 
         public bool existePeca(Posicao pos)
@@ -33,15 +33,15 @@
         {
             if (existePeca(pos))
             {
-                throw new TabuleiroException("Já existe uma peça nessa posição");
+                throw new TabuleiroException("Já existe uma peça nessa posição!");
             }        
-            Pecas[pos.Linha, pos.Coluna] = p;
+            Pecas[pos.linha, pos.coluna] = p;
             p.Posicao = pos;
         }
 
         public bool posicaoValida(Posicao pos)
         {
-            if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
+            if (pos.linha < 0 || pos.linha >= Linhas || pos.coluna < 0 || pos.coluna >= Colunas)
             {
                 return false;
             }
@@ -52,7 +52,7 @@
         {
             if (!posicaoValida(pos))
             {
-                throw new TabuleiroException("Posição inválida!:");
+                throw new TabuleiroException("Posição inválida!");
             }
         }
     }
